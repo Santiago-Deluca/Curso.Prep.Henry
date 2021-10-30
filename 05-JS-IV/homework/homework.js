@@ -6,6 +6,14 @@ function crearGato(nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
+    this.nombre = nombre ,
+    this.edad = edad ,
+  }
+
+    function meow(){
+      return "Meow!"
+  }
+
 }
 
 
@@ -21,26 +29,31 @@ function invocarMetodo(objeto, metodo) {
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
+  objeto.metodo;
 }
 
 function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-
+  return objetoMisterioso.numeroMisterioso * 5;
 }
 
 function eliminarPropiedad(objeto, unaPropiedad) {
-  // Elimina la propiedad de objeto cuyo nombre está pasado por el parametro unaPropiedad 
+  // Elimina la propiedad de objeto cuyo nombre está pasado por el parametro unaPropiedad
   // tip: tenes que usar bracket notation
   // Devuelve el objeto
   // Tu código:
+  delete objeto[unaPropiedad];
+  return objeto
 }
 
 function nuevoUsuario(nombre, email, password) {
   // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
   // Devuelve el objeto
   // Tu código:
+  let usuario = new Usuario(nombre, email, password);
+  return usuario;
 
 }
 
@@ -48,6 +61,11 @@ function tieneEmail(usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
+  if ( usuario.email !== null) {
+    return true
+  } else {
+    return false
+  }
 }
 
 
